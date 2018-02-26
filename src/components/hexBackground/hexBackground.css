@@ -1,0 +1,63 @@
+body {
+    background-color: #a5a5af;
+}
+
+.aic-hex-bg {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.aic-hex-bg__wrapper {
+    width: calc(100% + 3rem);
+    height: calc(100% + 3rem);
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.aic-hex-bg__row {
+    display: flex;
+    margin-top: -13px;
+}
+
+.aic-hex-bg__row:nth-child(odd) {
+    margin-left: -25px;
+}
+
+.aic-hex-bg__item-core {
+    transition: all .5s ease-in-out;
+    width: 50px;
+    height: 55px;
+    position: relative;
+}
+
+.aic-hex__svg {
+    width: 50px;
+    height: auto;
+    display: block;
+    backface-visibility: hidden;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.aic-hex-bg__item {
+    width: 50px;
+    height: 55px;
+    position: relative;
+    transform-style: preserve-3d;
+}
+
+.aic-hex-bg__item:hover .aic-hex-bg__item-core {
+    transform: rotateY(180deg);
+}
+
+.aic-hex-bg__item:hover .aic-hex__svg--back {
+    transform: rotateY(0);
+}
+
+.aic-hex__svg--back {
+    transform: rotateY(180deg);
+}
