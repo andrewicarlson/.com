@@ -66,12 +66,10 @@ class HexBackground extends Component {
         
         return (
             <div className="aic-hex-bg">
-                <div className="aic-hex-bg__wrapper">
-                    <div dangerouslySetInnerHTML={{ __html: patternSvgString }}></div>
-                    {
-                        svgRows.map(row => <div key={svgRows.indexOf(row)} className="aic-hex-bg__row">{row}</div>)
-                    }
-                </div>
+                <div dangerouslySetInnerHTML={{ __html: patternSvgString }}></div>
+                {
+                    svgRows.map(row => <div key={svgRows.indexOf(row)} className="aic-hex-bg__row">{row}</div>)
+                }
             </div>
         );
     }

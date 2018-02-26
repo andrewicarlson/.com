@@ -3,18 +3,13 @@ body {
 }
 
 .aic-hex-bg {
-    position: relative;
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
-}
-
-.aic-hex-bg__wrapper {
-    width: calc(100% + 3rem);
-    height: calc(100% + 3rem);
-    position: absolute;
-    left: 0;
+    position: fixed;
     top: 0;
+    left: 0;
+    height: calc(100% + 3rem);
+    width: calc(100% + 3rem);
+    overflow: hidden;
+    z-index: 0;
 }
 
 .aic-hex-bg__row {
