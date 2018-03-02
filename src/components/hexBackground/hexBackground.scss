@@ -1,5 +1,8 @@
+@import '../../sass/variables/colors';
+@import '../../sass/functions/pxToRem';
+
 body {
-    background-color: #a5a5af;
+    background-color: $spun-pearl;
 }
 
 .aic-hex-bg {
@@ -14,22 +17,22 @@ body {
 
 .aic-hex-bg__row {
     display: flex;
-    margin-top: -13px;
+    margin-top: pxToRem(-13);
 }
 
 .aic-hex-bg__row:nth-child(odd) {
-    margin-left: -25px;
+    margin-left: pxToRem(-25);
 }
 
 .aic-hex-bg__item-core {
     transition: all .5s ease-in-out;
-    width: 50px;
-    height: 55px;
+    width: pxToRem(50);
+    height: pxToRem(55);
     position: relative;
 }
 
 .aic-hex__svg {
-    width: 50px;
+    width: pxToRem(50);
     height: auto;
     display: block;
     backface-visibility: hidden;
@@ -39,8 +42,8 @@ body {
 }
 
 .aic-hex-bg__item {
-    width: 50px;
-    height: 55px;
+    width: pxToRem(50);
+    height: pxToRem(55);
     position: relative;
     transform-style: preserve-3d;
 }

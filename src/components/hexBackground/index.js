@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './hexBackground.css';
+import './hexBackground.scss';
 
 class HexBackground extends Component {
     constructor(props) {
