@@ -13,3 +13,8 @@ html, body, .aic {
   height: 100%;
   position: relative;
 }
+
+.aic-pull-forward {
+  position: relative;
+  z-index: 1;
+}
