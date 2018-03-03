@@ -8,10 +8,10 @@ import './app.scss';
 class App extends Component {
   render() {
     return (
-      <div className="aic">
+      <div className="aic-app">
         <Header></Header>
-        <Navigation></Navigation>
         <Route path="/" component={Home} />
+        <Navigation></Navigation>
       </div>
     );
   }
