@@ -42,7 +42,7 @@ class HexBackground extends Component {
          * Add inline SVGs as strings because JSX doesn't support namespaced XML attributes.
          */
         const patternSvgString = '<svg class="aic-hex__svg"> <defs> <radialGradient id="GradientFront" cx="50%" cy="50%" r="75%" > <stop offset="0%" style="stop-color:rgb(255,255,255);stop-opacity:1" /> <stop offset="100%" style="stop-color:rgb(244,244,244);stop-opacity:1" /> </radialGradient> <radialGradient id="GradientBack" cx="50%" cy="50%" r="75%" > <stop offset="100%" style="stop-color:rgb(255,255,255);stop-opacity:1" /> <stop offset="0%" style="stop-color:rgb(244,244,244);stop-opacity:1" /> </radialGradient> </defs> </svg>';
-        const hexSvgString = '<svg class="aic-hex__svg--front aic-hex__svg" viewBox="0 0 10 11"> <polygon fill="url(#GradientFront)" stroke="#a5a5af" stroke-width=".10" points="10,8.532 5,11.376 0,8.532 0,2.844 5,0 10,2.844 "/> </svg><svg class="aic-hex__svg--back aic-hex__svg" viewBox="0 0 10 11"> <polygon class="poly-back" fill="url(#GradientBack)" stroke="#a5a5af" stroke-width=".1" points="10,8.532 5,11.376 0,8.532 0,2.844 5,0 10,2.844 "/> </svg>';
+        const hexSvgString = '<svg class="aic-hex__svg--front aic-hex__svg" viewBox="0 0 10 11"> <polygon fill="url(#GradientFront)" stroke="#a5a5af" stroke-width=".10" points="10,8.532 5,11.376 0,8.532 0,2.844 5,0 10,2.844 "/> </svg><svg class="aic-hex__svg--back aic-hex__svg" viewBox="0 0 10 11"> <polygon class="poly-back" fill="url(#GradientBack)" stroke="#a5a5af" stroke-width=".1" points="10,8.532 5,11.376 0,8.532 0,2.844 5,0 10,2.844 "/> </svg>';        
         const svgWidth = 50;
         const svgHeight = 55;
         const excess = 5;

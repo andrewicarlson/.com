@@ -14,7 +14,7 @@ class Navigation extends Component {
                 text: 'Portfolio'
             },
             {
-                url: '/Blog',
+                url: '/blog',
                 text: 'Blog'
             },
             {
@@ -26,7 +26,7 @@ class Navigation extends Component {
             <nav className="aic-navigation aic-pull-forward">
                 <div className="aic-navigation__content">
                     {
-                        navItems.map(item => <Link to={item.url} className="aic-navigation__item">{item.text}</Link>)
+                        navItems.map(item => <Link key={item.url} to={item.url} className="aic-navigation__item">{item.text}</Link>)
                     }
                 </div>
             </nav>
