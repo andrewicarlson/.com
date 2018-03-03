@@ -5,7 +5,7 @@ class Portfolio extends Component {
     render() {
         return(
             <div className="aic-view">
-                
+                Portfolio
             </div>
         );
     }

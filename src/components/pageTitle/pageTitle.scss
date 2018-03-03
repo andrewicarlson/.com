@@ -1,0 +1,23 @@
+@import '../../sass/index';
+
+.aic-page-title--lined {
+    position: relative;
+
+    &:after {
+        content: '';
+        height: 1px; 
+        position: absolute;
+        top: 50%;
+        transform: translateX(-1px);
+        width: 100%;
+        background-color: $mine-shaft;
+        left: 5px;
+    }
+}
+
+.aic-page-title--inner {
+    position: relative;
+    z-index: 1;
+    background-color: $wild-sand;
+    padding-right: 1.5rem;
+}
