@@ -24,9 +24,11 @@ class Navigation extends Component {
         ]
         return(
             <nav className="aic-navigation aic-pull-forward">
-                {
-                    navItems.map(item => <Link to={item.url} className="aic-navigation__item">{item.text}</Link>)
-                }
+                <div className="aic-navigation__content">
+                    {
+                        navItems.map(item => <Link to={item.url} className="aic-navigation__item">{item.text}</Link>)
+                    }
+                </div>
             </nav>
         )
     }

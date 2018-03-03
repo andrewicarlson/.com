@@ -2,11 +2,20 @@
 
 .aic-navigation {
     position: fixed;
+    width: 100%;
     bottom: 0;
     left: 0;
-    width: 100%;
-    display: flex;
     padding: pxToRem(30) pxToRem(50);
+    background: $silver-tree;
+    background: -moz-linear-gradient(60deg, $silver-tree 0%, $downy 100%);
+    background: -webkit-linear-gradient(60deg, $silver-tree 0%,$downy 100%);
+    background: linear-gradient(60deg, $silver-tree 0%,$downy 100%);
+}
+
+.aic-navigation__content {
+    margin: 0 auto;
+    max-width: pxToRem(500);
+    display: flex;
     justify-content: space-between;
 }
 
