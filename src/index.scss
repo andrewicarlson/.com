@@ -4,10 +4,14 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 16px;
+}
+
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font: pxToRem(20) $font-body;
 }
 
 html, body, .aic-root {
@@ -16,22 +20,11 @@ html, body, .aic-root {
   position: relative;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 .aic-app {
   padding-bottom: pxToRem(160);
-}
-
-.aic-pull-forward {
-  position: relative;
-  z-index: 1;
-}
-
-.aic-typography--title {
-  @include title-type();
-}
-
-.aic-content {
-  width: 95%;
-  max-width: pxToRem(600);
-  position: relative;
-  margin: 0 auto;
 }

@@ -9,9 +9,9 @@
         position: absolute;
         top: 50%;
         transform: translateX(-1px);
-        width: 100%;
+        width: calc(100% - 2px);
         background-color: $mine-shaft;
-        left: 5px;
+        right: 0;
     }
 }
 

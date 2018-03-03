@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import HexBackground from '../../hexBackground';
-import './home.scss';
 
 class Home extends Component {
     render() {
