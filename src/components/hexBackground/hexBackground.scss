@@ -1,11 +1,7 @@
-@import '../../sass/variables/colors';
-@import '../../sass/functions/pxToRem';
-
-body {
-    background-color: $spun-pearl;
-}
+@import '../../sass/index';
 
 .aic-hex-bg {
+    background-color: $spun-pearl;
     position: fixed;
     top: 0;
     left: 0;
