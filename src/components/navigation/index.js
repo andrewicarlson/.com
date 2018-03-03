@@ -14,10 +14,6 @@ class Navigation extends Component {
                 text: 'Portfolio',
             },
             {
-                url: '/blog',
-                text: 'Blog'
-            },
-            {
                 url: '/contact',
                 text: 'Contact',
             }
@@ -29,6 +25,7 @@ class Navigation extends Component {
                     {
                         navItems.map(item => <Link key={item.url} to={item.url} className="aic-navigation__item">{item.text}</Link>)
                     }
+                    <a target="_blank" rel="noopener noreferrer" href="https://bubinga.co/blog" className="aic-navigation__item">Blog</a>
                 </div>
             </nav>
         )
