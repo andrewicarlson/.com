@@ -7,11 +7,11 @@ class Navigation extends Component {
         const navItems = [
             {
                 url: '/about',
-                text: 'About'
+                text: 'About',
             },
             {
                 url: '/portfolio',
-                text: 'Portfolio'
+                text: 'Portfolio',
             },
             {
                 url: '/blog',
@@ -19,9 +19,10 @@ class Navigation extends Component {
             },
             {
                 url: '/contact',
-                text: 'Contact'
+                text: 'Contact',
             }
-        ]
+        ];
+
         return(
             <nav className="aic-navigation aic-pull-forward">
                 <div className="aic-navigation__content">
