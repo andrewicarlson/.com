@@ -1,0 +1,24 @@
+@import '../../sass/index';
+
+.aic-resource {
+    width: calc(100% / 3);
+    font: pxToRem(20) $font-primary;
+    color: $evening-sea;
+    text-decoration: none;
+    padding: pxToRem(15) pxToRem(15);
+    display: flex;
+    flex: 1 auto;
+    flex-direction: column;
+    align-items: center;
+
+    @media(min-width:768px) {
+        width: 0;
+        border: 0;
+        padding: 0 pxToRem(15);
+    }
+}
+
+.aic-resource__img {
+    width: 50%;
+    max-width: pxToRem(50);
+}
