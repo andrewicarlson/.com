@@ -54,38 +54,35 @@ class PortfolioComponent extends Component {
                 img: Ford,
                 text: 'Ford',
                 className: 'aic-portfolio__link--animate',
-                path: '/portfolio/ford',
-                data: 'text'
+                path: '/portfolio/ford'
             },
             {
                 img: FirstTennessee,
-                text: 'FirstTennessee Bank',
-                path: '/portfolio/firsttennessee',
-                data: 'text'
+                text: 'FirstTennessee Bank'
             },
             {
                 img: Gatorade,
-                text: 'Gatorade',
-                path: '/portfolio/gatorade',
-                data: 'text'
+                text: 'Gatorade'
             },
             {
                 img: P66,
-                text: 'Phillips66',
-                path: '/portfolio/p66',
-                data: 'text'
+                text: 'Phillips66'
             },
             {
                 img: Honeywell,
-                text: 'Honeywell',
-                path: '/portfolio/honeywell',
-                data: 'text'
+                text: 'Honeywell'
             }
         ].map(item => 
             <div>
-                <Link className={"aic-portfolio__link " + item.className} to="">
+                {item.path && 
+                    <Link className="aic-portfolio__link" to={item.path}>
+                        <img key={item.text} className={"aic-portfolio__item " + item.className} src={item.img} alt={item.text} />
+                    </Link>
+                }
+
+                {!item.path && 
                     <img key={item.text} className="aic-portfolio__item" src={item.img} alt={item.text} />
-                </Link>
+                }
             </div>
         );
 
@@ -103,7 +100,9 @@ class PortfolioComponent extends Component {
                 <section className="aic-content aic-pull-forward">
                     <PageTitle text="Weekends" />
                     <div className="aic-portfolio-group">
-                        
+                        {
+                            this.chunkItems(weekends).map(item => <div key={item} className="aic-portfolio__row">{item}</div> )
+                        }
                     </div>
                 </section>
             </div>
