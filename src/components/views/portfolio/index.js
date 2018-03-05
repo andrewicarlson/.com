@@ -71,6 +71,10 @@ class PortfolioComponent extends Component {
             {
                 img: Images.Jig,
                 text: 'Jig'
+            },
+            {
+                img: Images.KcdcVoice,
+                text: 'KCDC Voice'
             }
         ].map(item => 
             <div>

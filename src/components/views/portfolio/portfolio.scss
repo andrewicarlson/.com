@@ -2,19 +2,27 @@
 
 @keyframes tremor {
     25% {
+        animation-timing-function: ease-in-out;
         transform: rotateY(0);
+        transform-origin: top center;
     }
 
     45% {
+        animation-timing-function: ease-in-out;
         transform: rotateY(25deg);
+        transform-origin: top center;
     }
 
     65% {
+        animation-timing-function: ease-in-out;
         transform: rotateY(-25deg);
+        transform-origin: top center;
     }
 
     85% { 
+        animation-timing-function: ease-in-out;
         transform: rotateY(0);
+        transform-origin: top center;
     }
 }
 

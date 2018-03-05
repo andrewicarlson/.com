@@ -9,6 +9,7 @@ import DebtChomper from './debtchomper.png';
 import Bpuzzld from './bpuzzld.png';
 import Molliepop from './molliepop.png';
 import Jig from './jig.png';
+import KcdcVoice from './kcdc-voice.png';
 
 export {
     Gatorade,
@@ -21,5 +22,6 @@ export {
     DebtChomper,
     Bpuzzld,
     Molliepop,
-    Jig
+    Jig,
+    KcdcVoice
 }
