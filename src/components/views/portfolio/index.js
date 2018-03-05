@@ -1,11 +1,7 @@
 import React, { Component } from 'react';
 import { Switch, Route, Link } from 'react-router-dom';
 import PageTitle from '../../pageTitle';
-import Gatorade from './gatorade.png';
-import Ford from './ford.png';
-import FirstTennessee from './firsttennessee.png';
-import P66 from './p66.png';
-import Honeywell from './honeywell.png';
+import * as Images from './images';
 import './portfolio.scss';
 import CaseStudy from './caseStudy';
 
@@ -28,49 +24,53 @@ class PortfolioComponent extends Component {
     render() {
         const weekdays = [
             {
-                img: Ford,
+                img: Images.Ford,
                 text: 'Ford'
             },
             {
-                img: FirstTennessee,
+                img: Images.FirstTennessee,
                 text: 'FirstTennessee Bank'
             },
             {
-                img: Gatorade,
+                img: Images.Gatorade,
                 text: 'Gatorade'
             },
             {
-                img: P66,
+                img: Images.P66,
                 text: 'Phillips66'
             },
             {
-                img: Honeywell,
+                img: Images.Honeywell,
                 text: 'Honeywell'
             }
         ].map(item => <div><img key={item.text} className="aic-portfolio__item" src={item.img} alt={item.text} /></div>);
 
         const weekends = [
             {
-                img: Ford,
-                text: 'Ford',
+                img: Images.DoubleMyDonation,
+                text: 'Double My Donation',
                 className: 'aic-portfolio__link--animate',
-                path: '/portfolio/ford'
+                path: '/portfolio/doublemydonation'
             },
             {
-                img: FirstTennessee,
-                text: 'FirstTennessee Bank'
+                img: Images.HowDoIFeelToday,
+                text: 'How do I feel today?'
             },
             {
-                img: Gatorade,
-                text: 'Gatorade'
+                img: Images.DebtChomper,
+                text: 'Debtchomper'
             },
             {
-                img: P66,
-                text: 'Phillips66'
+                img: Images.Bpuzzld,
+                text: 'Bpuzzld'
             },
             {
-                img: Honeywell,
-                text: 'Honeywell'
+                img: Images.Molliepop,
+                text: 'Molliepop'
+            },
+            {
+                img: Images.Jig,
+                text: 'Jig'
             }
         ].map(item => 
             <div>
