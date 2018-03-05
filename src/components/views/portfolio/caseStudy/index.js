@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import NoMatch from '../../noMatch';
 import studies from './studies.json';
 import './caseStudy.scss';
 
@@ -13,12 +14,18 @@ class CaseStudy extends Component {
             return acc;
         }, {});
 
-        return (
-            <div>
-                <Link to="/portfolio">Back</Link>
-                {currentStudy.logo}
-            </div>
-        )
+        if(currentStudy.key) {
+            return (
+                <div>
+                    <Link to="/portfolio">Back</Link>
+                    {currentStudy.logo}
+                </div>
+            )
+        } else {
+            return (
+                <NoMatch />
+            )
+        }
     }
 }
 
