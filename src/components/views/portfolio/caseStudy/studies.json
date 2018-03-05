@@ -1,0 +1,36 @@
+[
+    {
+        "key": "",
+        "logo": "",
+        "links": [
+            {
+                "url": "",
+                "text": "",
+                "isExternal": true
+            }
+        ],
+        "contentSections": [
+            {
+                "title": "",
+                "content": ""
+            }
+        ]
+    },
+    {
+        "key": "doublemydonation",
+        "logo": "test",
+        "links": [
+            {
+                "url": "",
+                "text": "",
+                "isExternal": true
+            }
+        ],
+        "contentSections": [
+            {
+                "title": "",
+                "content": ""
+            }
+        ]
+    }
+]

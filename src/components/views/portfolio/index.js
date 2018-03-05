@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route, Link } from 'react-router-dom';
+import { Switch, Route, Link } from 'react-router-dom';
 import PageTitle from '../../pageTitle';
 import Gatorade from './gatorade.png';
 import Ford from './ford.png';
@@ -7,8 +7,9 @@ import FirstTennessee from './firsttennessee.png';
 import P66 from './p66.png';
 import Honeywell from './honeywell.png';
 import './portfolio.scss';
+import CaseStudy from './caseStudy';
 
-class Portfolio extends Component {
+class PortfolioComponent extends Component {
     chunkItems(items) {
         const rows = Math.ceil(items.length) / 5 * 2;
         const chunks = [];
@@ -46,37 +47,47 @@ class Portfolio extends Component {
                 img: Honeywell,
                 text: 'Honeywell'
             }
-        ].map(item => <img key={item.text} className="aic-portfolio__item" src={item.img} alt={item.text} />);
+        ].map(item => <div><img key={item.text} className="aic-portfolio__item" src={item.img} alt={item.text} /></div>);
 
         const weekends = [
             {
                 img: Ford,
-                text: 'Ford'
+                text: 'Ford',
+                className: 'aic-portfolio__link--animate',
+                path: '/portfolio/ford',
+                data: 'text'
             },
             {
                 img: FirstTennessee,
-                text: 'FirstTennessee Bank'
+                text: 'FirstTennessee Bank',
+                path: '/portfolio/firsttennessee',
+                data: 'text'
             },
             {
                 img: Gatorade,
-                text: 'Gatorade'
+                text: 'Gatorade',
+                path: '/portfolio/gatorade',
+                data: 'text'
             },
             {
                 img: P66,
-                text: 'Phillips66'
+                text: 'Phillips66',
+                path: '/portfolio/p66',
+                data: 'text'
             },
             {
                 img: Honeywell,
-                text: 'Honeywell'
+                text: 'Honeywell',
+                path: '/portfolio/honeywell',
+                data: 'text'
             }
         ].map(item => 
-            <Link to="">
-                <img key={item.text} className="aic-portfolio__item" src={item.img} alt={item.text} />
-            </Link>
+            <div>
+                <Link className={"aic-portfolio__link " + item.className} to="">
+                    <img key={item.text} className="aic-portfolio__item" src={item.img} alt={item.text} />
+                </Link>
+            </div>
         );
-
-        const weekdayRows = this.chunkItems(weekdays);
-        const weekendRows = this.chunkItems(weekends);
 
         return(
             <div className="aic-view">
@@ -84,7 +95,7 @@ class Portfolio extends Component {
                     <PageTitle text="Weekdays" />
                     <div className="aic-portfolio-group">
                         {
-                            weekdayRows.map(item => <div key={item} className="aic-portfolio__row">{item}</div> )
+                            this.chunkItems(weekdays).map(item => <div key={item} className="aic-portfolio__row">{item}</div> )
                         }
                     </div>
                 </section>
@@ -92,13 +103,22 @@ class Portfolio extends Component {
                 <section className="aic-content aic-pull-forward">
                     <PageTitle text="Weekends" />
                     <div className="aic-portfolio-group">
-                        {
-                            weekendRows.map(item => <div key={item} className="aic-portfolio__row">{item}</div> )
-                        }
+                        
                     </div>
                 </section>
             </div>
         );
+    }
+}
+
+class Portfolio extends Component {
+    render() {
+        return (
+            <Switch>
+                <Route exact path="/portfolio" component={PortfolioComponent} />
+                <Route path="/portfolio/:study" component={CaseStudy} />
+            </Switch>
+        )
     }
 }
 

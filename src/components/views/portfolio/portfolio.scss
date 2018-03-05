@@ -1,15 +1,30 @@
 @import "../../../sass/index"; 
 
+@keyframes tremor {
+    0% {
+        transform: rotateY(0);
+    }
+
+    25% {
+        transform: rotateY(15deg);
+    }
+
+    75% {
+        transform: rotateY(0deg);
+    }
+}
+
 .aic-portfolio__row {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     transition: all .2s ease-in-out;
+    perspective: 800px;
 
     @media(min-width: 768px) {
         flex-direction: row;
-        margin-bottom: pxToRem(-55);
+        margin-bottom: pxToRem(-60);
 
         &:last-child {
             margin-bottom: 0;
@@ -17,6 +32,8 @@
     }
 }
 
-.aic-portfolio__item {
-
+.aic-portfolio__link--animate {
+    animation-duration: 2s;
+    animation-name: tremor;
+    animation-iteration-count: infinite;
 }
