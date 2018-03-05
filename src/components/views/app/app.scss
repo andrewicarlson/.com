@@ -20,3 +20,18 @@
     position: relative;
     margin: 0 auto;
 }
+
+
+
+.route-wrapper {
+    position: relative;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.route-wrapper > div {
+    position: absolute;
+    width: 100%;
+}
+  
