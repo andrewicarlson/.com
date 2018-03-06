@@ -1,0 +1,20 @@
+@import '../../../../sass/index';
+
+.aic-view--paper {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: white;
+    z-index: 1;
+}
+
+.aic-back {
+    display: flex;
+    flex-direction: column;
+    color: $evening-sea;
+    text-decoration: none;
+    font: 1rem $font-primary;
+    margin-top: 2rem;
+}

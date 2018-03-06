@@ -96,7 +96,7 @@ class PortfolioComponent extends Component {
                     <PageTitle text="Weekdays" />
                     <div className="aic-portfolio-group">
                         {
-                            this.chunkItems(weekdays).map((item, index) => <div key={index} className="aic-portfolio__row">{item && console.log(item)}</div> )
+                            this.chunkItems(weekdays).map((item, index) => <div key={index} className="aic-portfolio__row">{item}</div> )
                         }
                     </div>
                 </section>
