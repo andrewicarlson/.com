@@ -43,7 +43,7 @@ class PortfolioComponent extends Component {
                 img: Images.Honeywell,
                 text: 'Honeywell'
             }
-        ].map(item => <div><img key={item.text} className="aic-portfolio__item" src={item.img} alt={item.text} /></div>);
+        ].map(item => <div key={item.text}><img className="aic-portfolio__item" src={item.img} alt={item.text} /></div>);
 
         const weekends = [
             {
@@ -77,15 +77,15 @@ class PortfolioComponent extends Component {
                 text: 'KCDC Voice'
             }
         ].map(item => 
-            <div>
+            <div key={item.text}>
                 {item.path && 
                     <Link className="aic-portfolio__link" to={item.path}>
-                        <img key={item.text} className={"aic-portfolio__item " + item.className} src={item.img} alt={item.text} />
+                        <img className={"aic-portfolio__item " + item.className} src={item.img} alt={item.text} />
                     </Link>
                 }
 
                 {!item.path && 
-                    <img key={item.text} className="aic-portfolio__item" src={item.img} alt={item.text} />
+                    <img className="aic-portfolio__item" src={item.img} alt={item.text} />
                 }
             </div>
         );
@@ -96,7 +96,7 @@ class PortfolioComponent extends Component {
                     <PageTitle text="Weekdays" />
                     <div className="aic-portfolio-group">
                         {
-                            this.chunkItems(weekdays).map(item => <div key={item} className="aic-portfolio__row">{item}</div> )
+                            this.chunkItems(weekdays).map((item, index) => <div key={index} className="aic-portfolio__row">{item && console.log(item)}</div> )
                         }
                     </div>
                 </section>
@@ -105,7 +105,7 @@ class PortfolioComponent extends Component {
                     <PageTitle text="Weekends" />
                     <div className="aic-portfolio-group">
                         {
-                            this.chunkItems(weekends).map(item => <div key={item} className="aic-portfolio__row">{item}</div> )
+                            this.chunkItems(weekends).map((item, index) => <div key={index} className="aic-portfolio__row">{item}</div> )
                         }
                     </div>
                 </section>
