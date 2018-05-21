@@ -19,7 +19,7 @@
     },
     {
         "key": "doublemydonation",
-        "logo": "../doublemydonation.png",
+        "logo": "./portfolio-content/doublemydonation.png",
         "title": "",
         "links": [
             {

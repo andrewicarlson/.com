@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import NoMatch from '../../noMatch';
-import studies from './studies.json';
+import studies from './portfolio-content/studies.json';
 import Back from './back.svg';
 import External from './external.svg';
 import './caseStudy.scss';
@@ -28,13 +28,13 @@ class CaseStudy extends Component {
                         </Link>
                         <div className="aic-study-logo">
                             <span>
-                                <img src={currentStudy.logo} alt={currentStudy.text} />
+                                <img src={require(`${currentStudy.logo}`)} alt={currentStudy.text} />
                             </span>
                         </div>
 
                         <div className="aic-study-links">
                             {
-                                currentStudy.links.map((item, index) => <a className="aic_study-links__item" href={require(item.url)} target="_blank">{item.text}</a>)
+                                currentStudy.links.map((item, index) => <a key={index} className="aic_study-links__item" href={item.url} target="_blank">{item.text}</a>)
                             }
                         </div>
 

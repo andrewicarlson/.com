@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Switch, Route, Link } from 'react-router-dom';
 import PageTitle from '../../pageTitle';
-import * as Images from './images';
+import * as Images from './caseStudy/portfolio-content/images';
 import './portfolio.scss';
 import CaseStudy from './caseStudy';
 
