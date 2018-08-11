@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import NoMatch from '../../noMatch';
 import studies from './portfolio-content/studies.json';
+import PageTitle from '../../../pageTitle';
 import Back from './back.svg';
 import External from './external.svg';
 import './caseStudy.scss';
@@ -19,7 +20,7 @@ class CaseStudy extends Component {
         if(currentStudy.key) {
             return (
                 <div className="aic-view aic-view--paper">
-                    <section className="aic-content aic-pull-forward">
+                    <section className="aic-content aic-pull-forward aic-view-paper__content">
                         <Link to="/portfolio" className="aic-back">
                             <span>
                                 <img src={Back} alt="Back to Portfolio" />
@@ -34,12 +35,24 @@ class CaseStudy extends Component {
 
                         <div className="aic-study-links">
                             {
-                                currentStudy.links.map((item, index) => <a key={index} className="aic_study-links__item" href={item.url} target="_blank">{item.text}</a>)
+                                currentStudy.links.map((item, index) =>
+                                    <a key={index} className="aic-study-links__item" href={item.url} target="_blank">
+                                        {item.text}
+                                        {(item.isExternal) ? <img className="aic-study-links__item--external" src={External} /> : ''}
+                                    </a>
+                                )
                             }
                         </div>
 
                         <div className="aic-study-content">
-                            
+                            {
+                                currentStudy.contentSections.map((item, index) => 
+                                    <div key={index}>
+                                        <PageTitle text={item.title} paper />
+                                        <div dangerouslySetInnerHTML={{ __html: item.content }}></div>
+                                    </div>
+                                )
+                            }
                         </div>
                     </section>
                 </div>

@@ -23,16 +23,20 @@
         "title": "",
         "links": [
             {
-                "url": "",
-                "text": "",
+                "url": "https://doublemydonation.org",
+                "text": "See the App",
                 "isExternal": true
             }
         ],
         "contentSections": [
             {
-                "title": "",
-                "content": ""
-            }
+                "title": "The Why",
+                "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In a nisi et odio tempus consectetur. Donec rutrum tristique justo, vel iaculis nisl sollicitudin ac. Curabitur mollis mi quis convallis dapibus. Vestibulum vitae laoreet risus. Maecenas hendrerit condimentum sem, at aliquam neque.</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In a nisi et odio tempus consectetur. Donec rutrum tristique justo, vel iaculis nisl sollicitudin ac. Curabitur mollis mi quis convallis dapibus. Vestibulum vitae laoreet risus. Maecenas hendrerit condimentum sem, at aliquam neque. </p>"
+            },
+            {
+              "title": "The Why",
+              "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In a nisi et odio tempus consectetur. Donec rutrum tristique justo, vel iaculis nisl sollicitudin ac. Curabitur mollis mi quis convallis dapibus. Vestibulum vitae laoreet risus. Maecenas hendrerit condimentum sem, at aliquam neque.</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In a nisi et odio tempus consectetur. Donec rutrum tristique justo, vel iaculis nisl sollicitudin ac. Curabitur mollis mi quis convallis dapibus. Vestibulum vitae laoreet risus. Maecenas hendrerit condimentum sem, at aliquam neque. </p>"
+          }
         ]
     }
 ]

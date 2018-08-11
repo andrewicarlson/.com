@@ -8,6 +8,8 @@
     left: 0;
     background: white;
     z-index: 1;
+    overflow-y: scroll;
+    padding-bottom: 10rem;
 }
 
 .aic-back {
@@ -17,4 +19,36 @@
     text-decoration: none;
     font: 1rem $font-primary;
     margin-top: 2rem;
+}
+
+.aic-study-logo {
+    text-align: center;
+    margin-bottom: pxToRem(30);
+}
+
+.aic-study-links {
+    display: flex;
+
+}
+
+.aic-study-links__item {
+    font-size: pxToRem(20);
+    background-color: $silver-tree;
+    border-bottom: pxToRem(4) solid $evening-sea;
+    color: $mine-shaft;
+    flex: 1 auto;
+    text-align: center;
+    padding: pxToRem(10);
+    max-width: 50%;
+    text-decoration: none;
+    margin-right: pxToRem(10);
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.aic-study-links__item--external {
+    max-width: pxToRem(15);
+    margin-left: pxToRem(10);
 }
