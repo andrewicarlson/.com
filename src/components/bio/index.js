@@ -8,12 +8,9 @@ class Bio extends Component {
             <section className="aic-content aic-pull-forward">
                 <PageTitle text="About Me"/>
                 <img src={Me} alt="Andrew Carlson" />
-                <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam rutrum libero porta mi mollis, nec vulputate felis posuere. Morbi semper arcu ut diam egestas molestie. Mauris auctor quam non ex dapibus finibus. Pellentesque massa nulla, convallis eget lectus non, dapibus commodo enim.
-                </p>
-                <p>
-                Nullam mattis felis ac magna semper cursus. Sed ultrices dui id lectus suscipit, et mattis sem convallis. Curabitur eros ex, ultrices non velit et, consectetur interdum purus. Sed libero risus, pulvinar id commodo et, viverra eu justo. Aliquam erat volutpat. Vivamus dui magna, egestas non nibh a, laoreet tincidunt sapien.
-                </p>
+                <p>Andrew Carlson is an experienced Technical Architect who partners with companies who want to stay hungry and founders who want to scale their technical practice.</p>
+                <p>Andrew believes that the most important player in any digital experience is the end user, and the way to deliver them with the greatest impact is to build the experience with them in mind every step of the way.</p>
+                <p>Working with companies like Ford, Honeywell, and Phillips 66 has given Andrew strong enterprise experience and doing so from the Agency side has kept him on the cutting edge of technology and modern practices. He is involved in the local development community, leads an Apprenticeship program, organizes a Client-Side Center of Excellence at VML, and has actively mentored over the course of his career.</p>
             </section>
         );
     }

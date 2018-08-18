@@ -2,14 +2,15 @@
 
 .aic-navigation {
     position: fixed;
-    width: 100%;
-    bottom: 0;
-    left: 0;
-    padding: pxToRem(30) pxToRem(50);
-    background: $silver-tree;
-    background: -moz-linear-gradient(60deg, $silver-tree 0%, $downy 100%);
-    background: -webkit-linear-gradient(60deg, $silver-tree 0%,$downy 100%);
-    background: linear-gradient(60deg, $silver-tree 0%,$downy 100%);
+    width: calc(100% - 50px);
+    bottom: pxToRem(25);
+    left: pxToRem(25);
+    box-shadow: 0 1px 5px 0 #333;
+    padding: 0 pxToRem(10);
+    background: $nav-grad-from;
+    background: -moz-linear-gradient(60deg, $nav-grad-from 0%, $nav-grad-to 100%);
+    background: -webkit-linear-gradient(60deg, $nav-grad-from 0%,$nav-grad-to 100%);
+    background: linear-gradient(60deg, $nav-grad-from 0%,$nav-grad-to 100%);
 }
 
 .aic-navigation__content {
@@ -17,10 +18,27 @@
     max-width: pxToRem(500);
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .aic-navigation__item {
-    font: bold pxToRem(20) $font-body;
-    color: $mine-shaft;
+    font: 300 pxToRem(16) $font-primary;
+    color: $white;
     text-decoration: none;
+
+    @media(min-width: 768px) {
+        font: 300 pxToRem(20) $font-primary;
+    }
+}
+
+.aic-logo {
+    color: $white;
+    font: italic pxToRem(32) $font-logo;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 5rem;
+    min-height: 5rem;
 }

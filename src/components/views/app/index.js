@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Switch, Route } from 'react-router-dom';
-import Header from '../../header';
 import Navigation from '../../navigation';
 import Home from '../home';
 import About from '../about';
@@ -13,7 +12,6 @@ class App extends Component {
   render() {
     return (
       <div className="aic-app">
-        <Header></Header>
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/about" component={About} />

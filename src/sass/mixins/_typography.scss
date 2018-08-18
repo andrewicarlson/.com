@@ -1,8 +1,8 @@
 @mixin title-type() {
-    font: pxToRem(50) $font-primary;
+    font: 900 pxToRem(45)/1 $font-primary;
     color: $mine-shaft;
 
     @media(min-width:768px) {
-        font-size: pxToRem(65);
+        font-size: pxToRem(55);
     }
 }

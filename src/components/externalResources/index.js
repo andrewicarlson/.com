@@ -23,7 +23,7 @@ class ExternalResources extends Component {
             },
             {
                 text: 'Résumé',
-                url: '#',
+                url: 'mailto:hello@andrewicarlson.com',
                 icon: Pdf
             },
             {
@@ -43,7 +43,7 @@ class ExternalResources extends Component {
                 <PageTitle text="Resources"/>
                 <div className="aic-resources">
                     {
-                        links.map(link => <ExternalResource key={link.url} url={link.url} text={link.text} icon={link.icon} />)  
+                        links.map(link => <ExternalResource newTab={!link.url.indexOf('mailto')} key={link.url} url={link.url} text={link.text} icon={link.icon} />)
                     }
                 </div>
             </section>

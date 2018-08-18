@@ -1,0 +1,11 @@
+@import "../../../sass/index";
+
+.aic-home-headline {
+    margin-top: pxToRem(210);
+    font: 400 pxToRem(55)/1 $font-logo;
+    color: $mine-shaft;
+
+    @media(min-width:768px) {
+        font-size: pxToRem(65);
+    }
+}

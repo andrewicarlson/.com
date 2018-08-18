@@ -50,41 +50,53 @@ class PortfolioComponent extends Component {
                 img: Images.DoubleMyDonation,
                 text: 'Double My Donation',
                 className: 'aic-portfolio__link--animate',
-                path: '/portfolio/doublemydonation'
+                url: 'https://doublemydonation.org'
             },
             {
                 img: Images.HowDoIFeelToday,
-                text: 'How do I feel today?'
+                text: 'How do I feel today?',
+                className: 'aic-portfolio__link--animate',
+                url: 'https://github.com/andrewicarlson/howdoifeeltoday'
             },
             {
                 img: Images.DebtChomper,
-                text: 'Debtchomper'
+                text: 'Debtchomper',
+                className: 'aic-portfolio__link--animate',
+                url: 'https://debtchomper.com/'
             },
             {
                 img: Images.Bpuzzld,
-                text: 'Bpuzzld'
+                text: 'Bpuzzld',
+                className: 'aic-portfolio__link--animate',
+                url: 'https://bpuzzld.com'
             },
             {
                 img: Images.Molliepop,
-                text: 'Molliepop'
+                text: 'Molliepop',
+                className: 'aic-portfolio__link--animate',
+                url: 'https://molliepop.com'
             },
             {
                 img: Images.Jig,
-                text: 'Jig'
+                text: 'Jig',
+                className: 'aic-portfolio__link--animate',
+                url: 'https://github.com/andrewicarlson/jig'
             },
             {
                 img: Images.KcdcVoice,
-                text: 'KCDC Voice'
+                text: 'KCDC Voice',
+                className: 'aic-portfolio__link--animate',
+                url: 'https://github.com/andrewicarlson/kcdc-voice'
             }
         ].map(item => 
             <div key={item.text}>
-                {item.path && 
-                    <Link className="aic-portfolio__link" to={item.path}>
+                {item.url &&
+                    <a className="aic-portfolio__link" target="_blank" href={item.url}>
                         <img className={"aic-portfolio__item " + item.className} src={item.img} alt={item.text} />
-                    </Link>
+                    </a>
                 }
 
-                {!item.path && 
+                {!item.url &&
                     <img className="aic-portfolio__item" src={item.img} alt={item.text} />
                 }
             </div>
